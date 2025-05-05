@@ -101,7 +101,7 @@ main .extra{
     font-weight: bold;
     position: relative;
 }
-main section{
+main > section{
     /* background: rgba(0, 0,0,0.1); */
     width: 90%;
     padding:10px;
@@ -309,6 +309,7 @@ ul li{
     color: hsla(240,50%,30%,0.9);
 }
 /* to-do list styling */
+
 #to-doList{
     border: 1px solid rgba(0, 0,0,0.2);
     height: auto;
