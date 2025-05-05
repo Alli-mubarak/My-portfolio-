@@ -143,7 +143,7 @@ section#about h1{
     height: auto;
 }
 article{
-    padding: 20px ;
+    padding: 10px ;
     /* background: hsl(240,50%,80%); */
     background: rgba(0, 0,0,0.1);
     overflow: hidden;
