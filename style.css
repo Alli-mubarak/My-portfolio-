@@ -413,7 +413,7 @@ ul li{
 }
 .marker{
     width: 40px;
-    background: transparent;
+    background: gold;
     height: 30px;
     cursor: pointer;
     position: relative;
