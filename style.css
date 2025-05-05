@@ -103,8 +103,8 @@ main .extra{
 }
 main section{
     /* background: rgba(0, 0,0,0.1); */
-    width: 80%;
-    padding:20px;
+    width: 85%;
+    padding:10px;
     margin:50px auto 50px;
 }
 section#about{
