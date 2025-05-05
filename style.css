@@ -103,7 +103,7 @@ main .extra{
 }
 main section{
     /* background: rgba(0, 0,0,0.1); */
-    width: 85%;
+    width: 90%;
     padding:10px;
     margin:50px auto 50px;
 }
@@ -313,7 +313,7 @@ ul li{
     border: 1px solid rgba(0, 0,0,0.2);
     height: auto;
     border-radius: 5px;
-    width:90%;
+    width:95%;
 }
 .options{
     height: 30px;
