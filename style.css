@@ -1,0 +1,902 @@
+*{
+    font-family: 'Chakra Petch';
+}
+body{
+    background: hsla(240,50%,40%,0.2);
+    height: 100vh;
+    display: flex;
+    margin: 0; padding: 0;
+    color: #000;
+}
+nav{
+    height: 100%;
+    width: 150px;
+    overflow: hidden;
+    position: fixed;
+}
+nav header{
+    height: 100px;
+    background:hsla(240,30%,90%);
+    margin-top: 0;
+    padding: 20px 0 ;
+}
+nav .links{
+    height: calc(100% -  100px);
+    padding: 10px 0;
+    display: grid;
+    grid-template:1fr 1fr 1fr 5fr/1fr ;
+}
+nav .links >*{
+    background: rgba(0, 0,0,0.1);
+    /* color: hsla(230,90%,30%,0.8); */
+    color: #000;
+    font-weight: 200;
+    width: 100%;
+    margin: 0 auto 2px;
+    text-decoration: none;
+    padding: 10px 0;
+    font-size: 20px;
+    text-align: center;
+}
+nav .links > a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+nav .links  a:hover{
+    background:hsla(240,30%,90%);
+}
+.handles{
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    font-size: 28px;
+}
+.socials a{
+    text-decoration: none;
+    color: darkblue;
+}
+.fa-telegram{
+    color: rgba(28, 126, 232, 0.9);
+}
+.fa-x-twitter{
+    color: #000;
+}
+.fa-whatsapp{
+    color: green;
+}
+#logo{
+    width: 100px;
+    height: 80px;
+    position: relative;
+    width: 70px;
+    overflow: hidden;
+    z-index: 3;
+    margin: auto;
+}
+#logo img{
+    /* width: 90%; */
+    position: absolute;
+    width: 110px;
+    left: -20px;
+}
+main{
+    width: calc(100% - 150px); height: auto;
+    /* background: rgba(0, 0,0,0.1); */
+    margin-left: 150px;
+}
+main #mainHeader{
+    background: hsl(240,50%,90%);
+    height: 50px;
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    width: inherit;
+    z-index: 3;
+    display: none;
+}
+#navigations{
+    display: none;
+}
+main #mainHeader .logo{
+    display: none;
+}
+main #intro, #myWorks,#myContact{
+    margin: 0 auto;
+    visibility: hidden;
+}
+main .extra{
+    margin-right: 20px;
+    width: 150px; height: 50px;
+    border: 2px solid hsla(240,50%,40%,0.8);
+    margin-left: auto;
+    text-align: center;
+    color: hsla(240,50%,40%,0.8);
+    cursor: pointer;
+    font-weight: bold;
+    position: relative;
+}
+main section{
+    /* background: rgba(0, 0,0,0.1); */
+    width: 80%;
+    padding:20px;
+    margin:50px auto 50px;
+}
+section#about{
+    height: auto;
+    min-height: 350px;
+}
+section#about .head{
+    height: auto;
+}
+section#about h1{
+    font-size: 6.5vw;
+    margin: 0;
+    text-align: left;
+    /* background-color: green; */
+}
+#about #job{
+    font-family: 'Chakra Petch', monospace;
+    font-size: 17px;
+    font-weight: 200;
+    margin: 0;
+}
+#about .contact{
+    padding: 15px 10px;
+    background: transparent;
+    border: 2px solid hsla(240,50%,40%,0.8);
+    color: hsla(240,50%,40%,0.8);
+    font-weight: bold;
+    font-size: 15px;
+    margin-top: 40px;
+    cursor: pointer;
+    transition: .2s;
+}
+#about .contact:hover{
+    font-size: 18px;
+}
+#works{
+    height: auto;
+}
+article{
+    padding: 20px ;
+    /* background: hsl(240,50%,80%); */
+    background: rgba(0, 0,0,0.1);
+    overflow: hidden;
+    height: 50px;
+    margin: 10px auto;
+}
+article .head{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    transition: .4s;
+}
+article .head h3{
+    width: 70%;
+}
+article .head .arrow{
+    width: 50px; height: 50px;
+    position: relative;
+    cursor: pointer;
+    z-index: 1;
+    transition: .3s;
+}
+article .head .arrow span{
+    position: absolute;
+    width: 3px; height: 25px;
+    border-radius: 10px;
+    background: hsla(240,50%,40%,0.9);
+    transform: rotate(-50deg);
+    top: 10px; left: 33px;
+    z-index: 1;
+}
+article .head .arrow span:nth-child(1){
+    transform: rotate(50deg);
+    left: 15px;
+}
+
+/* to-do list styling */
+#to-doList{
+    border: 1px solid rgba(0, 0,0,0.2);
+    height: auto;
+    border-radius: 5px;
+    width:90%;
+}
+.options{
+    height: 30px;
+    width: 20px;
+    margin-left: auto;
+    position: relative;
+    cursor: pointer;
+}
+.options span{
+    position: absolute;
+    width: 5px;height: 5px;
+    background: hsla(240,50%,40%,0.9);
+    top: 7px; left: 7px;
+    border-radius: 20px;
+}
+.options span:nth-child(2){
+    top: 20px;
+}
+.addBox{
+    width: 260px; height: 0;
+    background: rgba(0, 0,0,0.1);
+    margin-left: auto;
+    border-radius: inherit;
+    padding: 0;
+    overflow: hidden;
+    transition: .4s;
+}
+.addBox .inputBox{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: inherit;
+}
+.addBox input{
+    font-size: 18px;
+    padding: 5px;
+    border-radius: inherit;
+    background:hsla(240,30%,90%,0.6);
+    outline: none;
+    border: none;
+}
+.addBox input::placeholder{
+    color: hsla(240,50%,40%,0.7);
+}
+.addBox #listName{
+    width: 60%;
+}
+.addBox #listTime{
+    width: 25%;
+}
+.addBox button{
+    width: 95%; height: 30px;
+    display: block;
+    margin: 10px auto;
+    border-radius: inherit;
+    cursor: pointer;
+    font-size: 20px;
+    outline: none;
+    border: 2px solid hsla(240,50%,40%,0.9);
+    background: transparent;
+    color: hsla(240,50%,40%,0.9);
+}
+.lists{
+    height: auto;
+}
+.lists > *{
+    height: 50px;
+    border-radius: 5px;
+    display: flex;
+    background: rgba(0, 0,0,0.1);
+    margin: 10px auto;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5px;
+    transition: .6s;
+}
+.lists > *:hover{
+    background:hsla(240,30%,90%,0.6);
+}
+.lists input{
+    width: 30px;
+}
+.marker span:nth-child(2){
+    transform: rotate(45deg);
+    height: 20px;
+    left: 16px; top: 3px;
+}
+.lists .list-name{
+    font-size: 28px;
+    width:90%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    text-transform: capitalize;
+}
+.marker{
+    width: 40px;
+    background: transparent;
+    height: 30px;
+    cursor: pointer;
+    position: relative;
+    margin-right: 6px;
+    border: 1px solid hsla(240,50%,40%,0.9);
+    border-radius: 5px;
+}
+.marker span{
+    position: absolute;
+    width: 3px;
+    height: 10px;
+    background: hsla(240,50%,40%,0.9);
+    transform: rotate(-50deg);
+    left: 6px; top: 13px;
+    border-radius: 20px;
+    z-index: 2;
+    visibility: hidden;
+}
+.lists p.list-time{
+    font-weight: 100;
+    font-size: 19px;
+    width: 35%;
+}
+input:checked~.list-name, input:checked~.list-time{
+    opacity: 0.5;
+}
+input:checked~.marker span{
+   visibility: visible;
+}
+.checker{
+    display: none;
+}
+.delete-list{
+    width: 50px; height: 30px;
+    cursor: pointer;
+    position: relative;
+}
+.delete-list span{
+    position: absolute;
+    width: 14px; height: 3px;
+    border: 2px solid hsla(240,50%,40%,0.9);
+    border-radius: 50% 50% 0 0;
+    top: 3px;left: 7px;
+}
+.delete-list span:nth-child(2){
+    width: 10px; height: 15px;
+    border-radius: 0 0 20% 20%;
+    top: 9px; left: 9.5px;
+}
+/* calculator styling */
+#calculator-box{
+    background: transparent;
+}
+#calculator{
+    height: 350px; width: 250px;
+    background: grey;
+    border-radius: 10px;
+    padding: 10px;
+}
+#calculator #display-box{
+    height: 40px; width: 90%;
+    margin: auto;
+    background-color: #ddd;
+    font-size: 20px;
+    color: #000;
+    font-weight: bold;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0 10px ;
+    overflow: hidden;
+}
+#display{
+    font-size: 25px;
+    width: 220px;
+    outline: none;
+    border: none;
+    background: transparent;
+}
+.buttons{
+    width: 95%; height: 300px;
+    margin:10px auto 0;
+    display: grid;
+    grid-template:1fr 1fr 1fr 1fr 1fr/1fr 1fr 1fr 1fr;
+    gap: 3px;
+}
+.buttons button{
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 5px;
+}
+.sign{
+    /* background: blue; */
+    position: relative;
+}
+.sign span{
+    position: absolute;
+    width: 3px; height: 30px;
+    background: #222;
+    border-radius: 20px;
+    top: 0;
+}
+.multiply span{
+    transform: rotate(45deg);
+    top: 12px;
+}
+.multiply span:nth-child(2){
+    transform: rotate(-45deg);
+}
+.divide span{
+    transform: rotate(90deg);
+    top: 12px;
+}
+.divide span:nth-child(2){
+    height: 5px; width: 5px;
+    top: 15px;
+}
+.divide span:nth-child(3){
+    height: 5px; width: 5px;
+    top: 35px;
+}
+.add span{
+    top: 10px;
+}
+.add span:nth-child(2),.minus span,.solve span{
+    transform: rotate(90deg);
+    top: 10px;
+}
+.raise span{
+    transform: rotate(45deg);
+    height: 20px;
+    top: 15px; left: 19px;
+}
+.raise span:nth-child(2){
+    transform: rotate(-45deg);
+    left:31px ;
+}
+.dot span{
+    height: 5px; width: 5px;
+    top: 25px;
+}
+.solve span{
+    top: 5px;
+}
+.solve span:nth-child(2){
+    top: 15px;
+}
+/* end of calculator styling */
+/* quiz app */
+
+#quiz-app{
+    background: rgba(0, 0,0,0.1);
+    width: 80%; height: auto;
+    overflow: hidden;
+    margin:20px auto;
+    text-align:center;
+}
+#quiz{
+    height: auto; width: 100%;
+    overflow: hidden;
+    padding-bottom: 10px;
+}
+.questionBox{
+    width: 90%; height: auto;
+    margin: auto;
+}
+.answersBox{
+    width: 80%; height: auto;
+    margin: 10px auto;
+    text-align: center;
+}
+.answersBox > *{
+    margin: 10px auto;
+    background: rgba(225, 225,225,0.4);
+    border: 2px solid transparent;
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.correctAnswer,#submit{
+    display: none;
+}
+.quiz-buttons{
+    text-align: center;
+    margin-top: 20px;
+    /* background: green; */
+}
+.quiz-buttons button{
+    cursor: pointer;
+    background: transparent;
+    border: 1px solid #000;
+    outline: none;
+    font-size: 17px;
+    padding:5px 8px;
+    border-radius: 5px;
+    font-weight: 300;
+}
+/* end of quiz app */
+/* Stopwatch styling  */
+#stopwatch{
+    height: 200px;
+    box-shadow: 0 0 3px hsla(240,50%,40%,0.4);
+    border-radius: 5px;
+}
+.digits{
+    text-align: center;
+}
+.digits p{
+    font-size: 50px;
+    text-shadow: 2px 2px hsl(240,50%,80%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.digits p>*{
+    height: fit-content; width:80px;
+}
+.sButtons{
+    text-align: center;
+}
+.sButtons button{
+    cursor: pointer;
+    background: transparent;
+    border: 1px solid #000;
+    outline: none;
+    font-size: 17px;
+    padding:5px 8px;
+    border-radius: 5px;
+    font-weight: 100;
+    margin: 0 10px;
+}
+#autoBtn{
+    display: none;
+}
+/* End of stopwatch styling */
+/* text-to-speech styling */
+
+.tts{
+    height: 250px;
+    background: none;
+    border: 3px dotted hsla(240,50%,40%,0.9);
+    outline:none;
+    border-radius: 15px;
+    align-items: center;
+    align-content: center;
+}
+#ttsInput{
+    width: 95%; height: 75%;
+    display: block;
+    padding: 5px;
+    font-size: 17px;
+    margin: 5px auto;
+    outline: none;
+    background: rgba(225, 225,225,0.4);
+    border: none;
+    color: hsla(240,50%,40%,0.9);
+    border-radius: 5px;
+}
+#ttsInput::placeholder{
+    color: hsla(240,50%,40%,0.5);
+}
+#spkBtn{
+    display: block;
+    border-radius: 5px;
+    width: 100px;
+    margin: auto;
+    cursor: pointer;
+    border: 2px solid hsla(240,50%,40%,0.9);
+    background: transparent;
+    color: hsla(240,50%,40%,0.9);
+    font-size: 16px;
+    padding: 3px 0;
+}
+/* Password generator */
+
+#passGen{
+    height: 160px; max-width: 350px; width: 90%;
+    background: hsl(240,50%,85%);
+    box-sizing: border-box;
+    box-shadow: 2px 2px 5px black;
+    padding: 5px ;
+    border-radius: 3px;
+}
+#pgUnit{
+    height: 50px;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+#pLength,#gnBtn{
+    cursor: pointer;
+    color: hsl(240, 72%, 21%);
+    background-color: hsl(240,50%,80%);
+    outline: none;
+    border-radius: 3px;
+    box-shadow: 2px 2px  hsl(240, 72%, 21%);
+    font-size: 16px;
+}
+#pLength{
+    width: 150px;
+    padding: 5px 0;
+}
+#gnBtn{
+    border: 1px solid gray;
+    outline: none;
+    padding: 5px;
+}
+#outP{
+    border-radius: 3px;
+    overflow: hidden;
+    width: 80%; height: 30px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#gp{
+    width: 70%; height: 90%;
+    padding: 5px;
+    padding-left: 10px;
+    font-size: 20px;
+    background: rgba(0, 0,0,0.1);
+    border: none; outline: none;
+    border-radius: 5px;
+    color: #000;
+}
+#copyP{
+    width: 40px;
+    height: 100%;
+    cursor: pointer;
+    position: relative;
+}
+#copyP span{
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background: hsl(240, 72%, 30%);
+    border-radius: 3px;
+    top: 9px; left: 12px;
+}
+#copyP span:nth-child(2){
+    background-color: hsl(240,50%,80%);
+    top:7px; left: 10px;
+}
+#copyP span:nth-child(2)::before{
+    position: absolute;
+    content: '';
+    width: 7px; height: 1px;
+    background: hsl(240, 72%, 30%);
+    top: 5px; left: 4px;
+}
+#copyP span:nth-child(2)::after{
+    position: absolute;
+    content: '';
+    width: 7px; height: 1px;
+    background: hsl(240, 72%, 30%);
+    top: 9px; left: 4px;
+}
+.alert{
+    text-align: center;
+    width: fit-content;
+    font-size: 13px;
+    margin:10px  auto;
+    padding: 3px;
+}
+/* end of password generator styling */
+
+/* websites links styling */
+
+#websites{
+    background: rgba(225, 225,225,0.3);
+}
+ul li{
+    list-style: square;
+    color: hsla(240,50%,30%,0.9);
+    margin-top: 20px;
+    margin-bottom: 20px;
+    height: 40px;
+}
+ul li a:hover{
+    font-size: 20px;
+    text-decoration: underline;
+}
+ul li a{
+    text-decoration: none;
+    font-size: 18px;
+    color: hsla(240,50%,40%,0.9);
+    transition: .3s;
+}
+/* end of websites styling */
+
+#socialLinks{
+    height: auto;
+}
+#contact .socials{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+#contact .socials a{
+    padding: 15px;
+    font-size: 40px;
+}
+footer{
+    width: 100%; height: auto;
+    /* background: red; */
+    position: relative;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    background: rgba(0, 0,0,0.2);
+    padding: 20px 0;
+}
+footer .dev-image{
+    width: 90%;
+    height: auto;
+    position: relative;
+    padding: 20px 0 30px;
+    margin: 10px auto;
+    text-align: center;
+}
+.dev-image img{
+    width: 150px;
+    box-shadow: 0 0 10px hsla(240,50%,40%,0.9);
+}
+.dev-image p{
+    width: 90%;
+    font-size: 13px;
+    text-align:left;
+    margin: 0;
+    margin-left: 30px;
+}
+.details{
+    margin: auto;
+    width: 60%;
+    min-width: 400px;
+}
+.to-top{
+    position: absolute;
+    width: 50px; height: 50px;
+    border: 1px solid hsla(240,50%,40%,0.9);
+    cursor: pointer;
+    left: calc(100% - 70px);
+    top: 100px;
+    border-radius: 5px;
+}
+.to-top span{
+    position: absolute;
+    background: hsla(240,50%,40%,0.9);
+    width: 3px; height: 30px;
+    border-radius: 20px;
+    top: 10px;
+}
+.to-top span:nth-child(2){
+    height: 15px; left: 20px; 
+    transform: rotate(40deg);
+}
+.to-top span:nth-child(3){
+    height: 15px; left: 30px;
+    transform: rotate(-40deg);
+}
+#copyright{
+    font-size: 12px;
+    font-weight: bold;
+}
+@media  screen and (max-width:720px) {
+    body{
+        display: block;
+    }
+     nav{
+        overflow: hidden;
+        height: 200px;
+        position: relative;
+        display: none;
+     }
+     main{
+        width: 100%;
+        margin-left: 0;
+     }
+     main #mainHeader{
+        height: 70px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid hsla(240,50%,40%,0.4);
+        background: hsl(240,50%,90%);
+     }
+     main #mainHeader .logo{
+        display: block;
+         height: 70px; width: 70px;
+         position: relative;
+         overflow: hidden;
+         z-index: 3;
+         margin-left: 25px;
+     }
+     .logo img{
+         position: absolute;
+         width: 90px;
+         left: -10px;
+     }
+     .menu{
+        width: 50px; height: 50px;
+        position: relative;
+        display: block;
+        cursor: pointer;
+        margin-right: 20px;
+     }
+     .menu span{
+        width: 5px;
+        height: 5px;
+        border: 1px solid transparent;
+        background:hsla(240,50%,40%,0.8);
+        position: absolute;
+        top: 22px; left: 22px;
+     }
+     .menu span:nth-child(1){
+        left: 15px; top: 15px;
+     }
+     .menu span:nth-child(2){
+        left: 15px; top: 29px;
+     }
+     .menu span:nth-child(3){
+        top: 15px; left: 29px;
+     }
+     .menu span:nth-child(4){
+        left: 29px; top: 29px;
+     }
+     .menu span:nth-child(5){
+        display: none;
+     }
+     .extra{
+        display: none;
+     }
+     #navigations{
+        height: 100%;
+        background:hsl(240,50%,80%);
+        width: 50%;
+        position: fixed;
+        left: 100%;
+        transition: all 0.5s;
+        padding: 16px 0;
+        display: grid;
+        grid-template:1fr 1fr 1fr 1fr 5fr /1fr ;
+        gap: 3px;
+        overflow: hidden;
+        z-index: 3;
+     }
+     #navigations > *{
+        background: rgba(0, 0,0,0.1);
+        /* color: hsla(230,90%,30%,0.8); */
+        color: #000;
+        font-weight: 200;
+        width: 100%;
+        margin: 0 auto 2px;
+        text-decoration: none;
+        padding: 10px 0;
+        font-size: 20px;
+        text-align: center;
+    }
+    #navigations > a:hover{
+        background:hsla(240,30%,90%);
+    }
+    #navigations .closer{
+        width: 50px;
+        margin:0;
+        margin-left: auto;
+        margin-right: 15px;
+        position: relative;
+        cursor: pointer;
+        background: transparent;
+    }
+    #navigations .closer span{
+        position: absolute;
+        width: 2px; height: 40px;
+        background:hsla(240,50%,40%,0.9);
+        border-radius: 15px;
+        transform: rotate(45deg);
+    }
+    #navigations .closer span:nth-child(1){
+        transform: rotate(-45deg);
+    }
+    section#about .head{
+        margin: 0;
+    }
+     section#about h1{
+        font-size: 10vw;
+        margin: 0;
+     }
+     .digits p{
+     font-size: 40px;
+     }
+
+     
+.lists .list-name{font-size: 20px;}
+.lists p.list-time{font-size: 14px;}
+}

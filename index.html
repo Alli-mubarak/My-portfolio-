@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Mubarak Alli - Portfolio</title>
+    <link rel="shortcut icon" href="icon.png" type="image/x-icon"/>
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia|Audiowide|Chakra Petch"/>
+    <script src="https://kit.fontawesome.com/c5cfeb88f7.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <nav>
+        <header>
+        <a href="index.html">
+            <div id="logo">
+            <img src="logo.png" alt="Dev-logo" />
+            </div>
+        </a>
+        </header>
+        <div class="links">
+            <a href="#intro" title="About Me" onclick="openUp(this)">About</a>
+            <a href="#myWorks" title="Works i have done" onclick="openUp(this)">Works</a>
+            <a href="#myContact" title="Social media handles" onclick="openUp(this)">Contact</a>
+            <div class="socials">
+                <div class="handles">
+                <a href='https://t.me/beegold0' target="_blank" title="Telegram handle"><i class="fa-brands fa-telegram"></i></a>
+                <a href="https://x.com/Almubaarak_b" target="_blank" title="X handle"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="https://wa.me/2349070108027" target="_blank" title="Whatsapp handle"><i class="fa-brands fa-whatsapp"></i></a>
+                </div>
+            </div>
+
+        </div>
+
+    </nav>
+    <main>
+        <header id="mainHeader">
+            <a href="index.html">
+                <div class="logo">
+                <img src="logo.png" alt="Dev-logo" >
+                </div>
+            </a>
+        
+        <div class="menu" onclick="openMenu()">
+            <span></span><span></span><span></span><span></span><span></span>
+        </div>
+        </header>
+        <div id="navigations">
+            <div class="closer" onclick="closer()">
+                <span></span><span></span>
+            </div>
+            <a href="#intro" title="About Me" onclick="closer()">About</a>
+            <a href="#myWorks" title="Works i have done" onclick="closer()">Works</a>
+            <a href="#myContact" title="Social media handles" onclick="closer()">Contact</a>
+            <div class="socials">
+                <div class="handles">
+                <a href='https://t.me/beegold0' target="_blank" title="Telegram handle"><i class="fa-brands fa-telegram"></i></a>
+                <a href="https://x.com/Almubaarak_b" target="_blank" title="X handle"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="https://wa.me/2349070108027" target="_blank" title="Whatsapp handle"><i class="fa-brands fa-whatsapp"></i></a>
+                </div>
+        </div>
+        </div>
+        <section id="intro">
+            <p>Introduction</p>
+        </section>
+        <section id="about">
+            <div class="head">
+            <h1>Hi,</h1>
+            <h1>I am Mubarak Alli</h1>
+            </div>
+            <p id="job">Front End Web Developer</p>
+            <button type="button" class="contact" onclick="document.location = '#myContact'">
+                Contact me!</button>
+        </section>
+        <section id="myWorks">
+            <p>My Works</p>
+        </section>
+        <section id="works">
+            <h1>Here are some of my previous projects</h1>
+            <div class="works">
+               <article id="to-doList-box">
+                <div class="head">
+                    <h3>To-do list</h3>
+                    <div class="arrow" onclick="toggle(this)"><span></span><span></span></div>
+                </div>
+                <section id="to-doList">
+                    <div class="options" title="Add option" onclick="openAdder()"><span></span><span></span><span></span></div>
+                    <div class="addBox">
+                        <div class="inputBox">
+                        <input type="text" name="list-name" id="listName" placeholder="Name" maxlength="14" title="Name format: 'Cooking'">
+                        <input type="text" name="time" id="listTime" placeholder="Time" maxlength="8" title="time format : '02:55 pm'">
+                        </div>
+                        <button type="button" onclick="addToList()" title="click to add">Add</button>
+                    </div>
+                    <div class="lists">
+                        <div>
+                            <input type="checkbox" id="rd" name="check"  class="checker" title="done?">
+                            <label for="rd" class="marker" title="click to mark as done"><span></span><span></span><span></span></label>
+                            <label for="rd" class="list-name">
+                            Read a novel</label>
+                            <p class="list-time">12:00 pm</p>
+                            <div class="delete-list" title="delete" onclick="deleteList(this)"><span></span><span></span></div>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="ph" name="check" class="checker" title="done?">
+                            <label for="ph" class="marker" title="click to mark as done"><span></span><span></span><span></span></label>
+                            <label for="ph" class="list-name">Paint a house</label>
+                            <p class="list-time">12:50 pm</p>
+                            <div class="delete-list" title="delete" onclick="deleteList(this)"><span></span><span></span></div>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="fs" name="check" class="checker" title="done?">
+                            <label for="fs" class="marker" title="click to mark as done"><span></span><span></span><span></span></label>
+                            <label for="fs" class="list-name">Fishing</label>
+                            <p class="list-time">01:10 pm</p>
+                            <div class="delete-list" title="delete" onclick="deleteList(this)"><span></span><span></span></div>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="ds" name="check" class="checker" title="done?">
+                            <label for="ds" class="marker" title="click to mark as done"><span></span><span></span><span></span></label>
+                            <label for="ds" class="list-name">Dishwashing</label>
+                            <p class="list-time">02:00 pm</p>
+                            <div class="delete-list" title="delete" onclick="deleteList(this)"><span></span><span></span></div>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="bb" name="check" class="checker" title="done?">
+                            <label for="bb" class="marker" title="click to mark as done"><span></span><span></span><span></span></label>
+                            <label for="bb" class="list-name">Basketball</label>
+                            <p class="list-time">05:00 pm</p>
+                            <div class="delete-list" title="delete" onclick="deleteList(this)"><span></span><span></span></div>
+                        </div>
+                    </div>
+                </section>
+               </article>
+               <article id="calculator-menu">
+                <div class="head">
+                    <h3>Calculator</h3>
+                    <div class="arrow" onclick="toggle(this)"><span></span><span></span></div>
+                </div>
+                <section id="calculator-box">
+                    <div id="calculator">
+                        <div id="display-box" >
+                            <input title="calculator display" disabled id="display">
+                        </div>
+                        <div class="buttons">
+                            <button onclick="clearOne()">C</button>
+                            <button onclick="clearAll()">CE</button>
+                            <button value="**" onclick="enterValue(this)" title="raise to power" class="raise sign"><span></span><span></span></button>
+                            <button value="*" onclick="enterValue(this)" title="multiply" class="multiply sign"><span></span><span></span></button>
+                            <button value="1" onclick="enterValue(this)">1</button>
+                            <button value="2" onclick="enterValue(this)">2</button>
+                            <button value="3" onclick="enterValue(this)">3</button>
+                            <button value="-" onclick="enterValue(this)" title="subtract" class="minus sign"><span></span></button>
+                            <button value="4" onclick="enterValue(this)">4</button>
+                            <button value="5" onclick="enterValue(this)">5</button>
+                            <button value="6" onclick="enterValue(this)">6</button>
+                            <button value="/" onclick="enterValue(this)" title="divide" class="divide sign"><span></span><span></span><span></span></button>
+                            <button value="7" onclick="enterValue(this)">7</button>
+                            <button value="8" onclick="enterValue(this)">8</button>
+                            <button value="9" onclick="enterValue(this)">9</button>
+                            <button value="+" onclick="enterValue(this)" title="add" class="add sign"><span></span><span></span></button>
+                            <button value="00" onclick="enterValue(this)">00</button>
+                            <button value="0" onclick="enterValue(this)">0</button>
+                            <button value=" ." onclick="add('.')" title="decimal point" class="dot sign"><span></span></button>
+                            <button title="solve" id="solve" class="solve sign"><span></span> <span></span></button>
+                        </div>
+                    </div>
+                </section>
+               </article>
+               <article id="quizBox">
+                <div class="head">
+                    <h3>Quiz App</h3>
+                    <div class="arrow" onclick="toggle(this)"><span></span><span></span></div>
+                </div>
+                <section id="quiz-app">
+                    <div id="quiz">
+                        <div class="questionBox">
+                            <h3><span id="qNo">1</span>. <span id="question">What is the full meaning of WHO?</span></h3>
+                        </div>
+                        <div class="answersBox" >
+                            <p class="option" title="A" onclick="choose(this)">World Hygeine Operation</p>
+                            <p class="option" title="B" onclick="choose(this)">West Holdings Objection</p>
+                            <p class="option" title="C" onclick="choose(this)">World Health Organisation</p>
+                            <p class="option" title="D" onclick="choose(this)">Williams Hughes Organisation</p>
+                            <p class="correctAnswer">C</p>
+                        </div>
+                        <div class="quiz-buttons">
+                            <button onclick="prev(this)" id="prev">Previous</button>
+                            <button onclick="next(this)" id="next">Next</button><br><br>
+                            <button id="submit" onclick="submit()">Submit</button>
+                        </div>
+                    </div>
+                </section>
+               </article>
+               <article id="stopwatchBox">
+                <div class="head">
+                    <h3>Stopwatch</h3>
+                    <div class="arrow" onclick="toggle(this)"><span></span><span></span></div>
+                </div>
+                <section id="stopwatch">
+                    <div class="digits">
+                        <p id="stN">
+                        <span id="sMin">00</span>:<span id="sSec">00</span>.<span id="sMis">00</span>
+                        </p>
+                    </div>
+                    <div class="sButtons">
+                        <button onclick="startSw()" id="strBtn">Start</button>
+                        <button id="autoBtn">auto</button>
+                        <button id="resetBtn">Reset</button>
+                    </div>
+                </section>
+               </article>
+               <article id="ttsBox">
+                <div class="head">
+                    <h3>Text-to-speech App</h3>
+                    <div class="arrow" onclick="toggle(this)"><span></span><span></span></div>
+                </div>
+                <section class="tts">
+                    <textarea name="tts" id="ttsInput" placeholder="Enter text here" title="Type text here!"></textarea><br>
+                    <button id="spkBtn" title="speak text" onclick="speakText()">Speak</button>
+                </section>
+               </article>
+               <article id="pgBox" >
+                <div class="head">
+                    <h3>Password generator</h3>
+                    <div class="arrow" onclick="toggle(this)"><span></span><span></span></div>
+                </div>
+                <section id="passGen">
+                    <div id="pgUnit">
+                        <select name="numbers" id="pLength" title="Choose the number of characters - 8 by default">
+                            <option value="8" selected hidden>Password length</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                            <option value="13">13</option>
+                            <option value="14">14</option>
+                            <option value="15">15</option>
+                        </select>
+                        <button id="gnBtn" onclick="genP()" title="Generate Password">Generate</button>
+                    </div>
+                    <div id="outP">
+                        <input type="text" name="genearted-password" id="gp" disabled title="Generated Password will appaer here">
+                        <div id="copyP" title="Copy Password" onclick="copyPw()"><span></span><span></span></div>
+                    </div>
+                    <p class="alert"></p>
+                </section>
+               </article>
+               <article id="webBox">
+                <div class="head">
+                    <h3>Websites</h3>
+                    <div class="arrow" onclick="toggle(this)"><span></span><span></span></div>
+                </div>
+                <section id="websites">
+                    <ul>
+                        <li><a href="#">Bamtech Website</a></li>
+                        <li><a href="https://gatto-plumber.vercel.app/">Gatto Plumber</a></li>
+                        <li><a href="https://lozar-electric.vercel.app/">Lozar Electric</a></li>
+                        <li><a href="https://x4mvox.mimo.run/index.html">Bayowa and His village people (Novel)</a></li>
+                        <li><a href="#">Penygram</a></li>
+                        <li><a href="https://fuchsia-ingrid-89.tiiny.site/">Netflix Clone</a></li>
+                        <li><a href="https://imagesearch-kdp5c.kinsta.page/">Image search</a></li>
+                        <!-- <li></li> -->
+                    </ul>
+                </section>
+               </article>
+            </div>
+        </section>
+        <section id="myContact">
+            <p>My Contact</p>
+        </section>
+        <section id="contact">
+            <h1>Contact me via my Social Media handles</h1>
+            <article id="socialLinks">
+                <div class="socials">
+                    <a href='https://t.me/beegold0' target="_blank" title="Telegram handle"><i class="fa-brands fa-telegram"></i></a>
+                    <a href="https://x.com/Almubaarak_b" target="_blank" title="X handle"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="https://wa.me/2349070108027" target="_blank" title="Whatsapp handle"><i class="fa-brands fa-whatsapp"></i></a>
+            </div>
+            </article>
+        </section>
+
+    
+    <footer id="footer">
+        <div class="dev-image">
+            <img src="dev.jpg" alt="developer"/>
+            <div class="details">
+            <p>Mubarak Alli is a Nigerian website developer.</p>
+            <p>Before I started my coding journey in 2022, I used to be an Electrician.</p>
+            <p>I am now a Full-time Website developer after i discovered the true potential of technology.</p>
+            </div>
+        </div>
+        
+        <div class="to-top" title="Back to top" onclick="document.location='#intro'">
+            <span></span><span></span><span></span></div>
+        <p id="copyright">@copyright, Mubarak Alli<br><span>2022 - <span id="year">2023</span></span></p>
+    </footer>
+
+    </main>
+<script src="script.js"></script>
+</body>
+</html>
