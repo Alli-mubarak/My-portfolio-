@@ -46,12 +46,12 @@
         </div>
         </header>
         <div id="navigations">
-            <div class="closer" onclick="closer()">
+            <div class="closer" onclick="closer(this)">
                 <span></span><span></span>
             </div>
-            <a href="#intro" title="About Me" onclick="closer()">About</a>
-            <a href="#myWorks" title="Works i have done" onclick="closer()">Works</a>
-            <a href="#myContact" title="Social media handles" onclick="closer()">Contact</a>
+            <a href="#intro" title="About Me" onclick="closer(this)">About</a>
+            <a href="#myWorks" title="Works i have done" onclick="closer(this)">Projects</a>
+            <a href="#myContact" title="Social media handles" onclick="closer(this)">Contact</a>
             <div class="socials">
                 <div class="handles">
                 <a href='https://t.me/beegold0' target="_blank" title="Telegram handle"><i class="fa-brands fa-telegram"></i></a>
@@ -69,6 +69,10 @@
             <h1>I am Mubarak Alli</h1>
             </div>
             <p id="job">Front End Web Developer</p>
+            <div id="textplay">
+                <p><span id="ft"></span><span id="fb"></span></p>
+                <p><span id="st"></span><span id="sb"></span></p>
+            </div>
             <button type="button" class="contact" onclick="document.location = '#myContact'">
                 Contact me!</button>
         </section>
@@ -84,10 +88,10 @@
                     <div class="arrow" onclick="toggle(this)"><span></span><span></span></div>
                 </div>
                 <section id="to-doList">
-                    <div class="options" title="Add option" onclick="openAdder()"><span></span><span></span><span></span></div>
+                    <div class="options" title="Add option" onclick="openAdder(this)"><span></span><span></span><span></span></div>
                     <div class="addBox">
                         <div class="inputBox">
-                        <input type="text" name="list-name" id="listName" placeholder="Name" maxlength="14" title="Name format: 'Cooking'">
+                        <input type="text" name="list-name" id="listName" placeholder="Name of task" maxlength="14" title="Name format: 'Cooking'">
                         <input type="text" name="time" id="listTime" placeholder="Time" maxlength="8" title="time format : '02:55 pm'">
                         </div>
                         <button type="button" onclick="addToList()" title="click to add">Add</button>
@@ -253,11 +257,11 @@
                 </div>
                 <section id="websites">
                     <ul>
-                        <li><a href="https://bamtech.vercel.app/">Bamtech Website</a></li>
+                        <li><a href="#">Bamtech Website</a></li>
                         <li><a href="https://gatto-plumber.vercel.app/">Gatto Plumber</a></li>
                         <li><a href="https://lozar-electric.vercel.app/">Lozar Electric</a></li>
                         <li><a href="https://x4mvox.mimo.run/index.html">Bayowa and His village people (Novel)</a></li>
-                        <li><a href="https://penygram-mobile.vercel.app/">Penygram</a></li>
+                        <li><a href="#">Penygram</a></li>
                         <li><a href="https://fuchsia-ingrid-89.tiiny.site/">Netflix Clone</a></li>
                         <li><a href="https://imagesearch-kdp5c.kinsta.page/">Image search</a></li>
                         <!-- <li></li> -->
@@ -265,6 +269,41 @@
                 </section>
                </article>
             </div>
+        </section>
+        <section id="skills">
+            <h1>My Skills</h1>
+            <article>
+                <div id="html">
+                    <h3>HTML</h3>
+                    <div class="range"></div>
+                    
+                </div>
+                <div id="css">
+                    <h3>CSS</h3>
+                    <div class="range"></div>
+                    
+                </div>
+                <div id="js">
+                    <h3>JavaScript</h3>
+                    <div class="range"></div>
+                    
+                </div>
+                <div id="ts">
+                    <h3>TypeScript</h3>
+                    <div class="range"></div>
+                    
+                </div>
+                <div id="rjs">
+                    <h3>React JS</h3>
+                    <div class="range"></div>
+                    
+                </div>
+                <div id="pyt">
+                    <h3>Python</h3>
+                    <div class="range"></div>
+                    
+                </div>
+            </article>
         </section>
         <section id="myContact">
             <p>My Contact</p>
@@ -285,9 +324,9 @@
         <div class="dev-image">
             <img src="dev.jpg" alt="developer"/>
             <div class="details">
-            <p>Mubarak Alli is a Nigerian website developer.</p>
-            <p>Before I started my coding journey in 2022, I used to be an Electrician.</p>
-            <p>I am now a Full-time Website developer after i discovered the true potential of technology.</p>
+            <p>I am a dedicated and passionate website developer.</p>
+            <p>I am open for collaboration and learning.</p>
+         
             </div>
         </div>
         
@@ -299,4 +338,5 @@
     </main>
 <script src="script.js"></script>
 </body>
-</html>
+                </html>
+                        
