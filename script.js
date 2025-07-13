@@ -1,31 +1,74 @@
 let menu = document.getElementById('navigations');
 function openUp(me){
-    for(let i=0; i<=3; i++){
-        me.parentElement.children[i].style.color ="#000";
+    for(let i=1; i<=3; i++){
+       me.parentElement.children[i].style.color ="#000";
     }
     
     setTimeout(()=>{
-        me.style.color = "blueviolet";
-        },100)
-    // me.style.color = "blueviolet";
-    
+        me.style.color = "hsla(240,50%,40%,1)";
+        },100);
 }
 function openMenu(){
     menu.style.left ='50%';
 }
-function closer(){
+function closer(me){
     menu.style.left = '100%';
+    openUp(me);
 }
-let isOpen = false;
+// for textplay
+let ft = document.getElementById('ft');
+let st = document.getElementById('st');
+let fb = document.getElementById('fb');
+let sb = document.getElementById('sb');
+let fn= 0,sn=0;
+let fText = 'I build websites';
+let sText = 'I teach coding'
+function textPlay(){
+let blinkID = setInterval(()=>{
+    fb.style.opacity="1";
+    setTimeout(()=>{
+        fb.style.opacity="0";
+    },150)
+},300);
+let ftID = setInterval(()=>{
+if(fn < (fText.length)){
+    ft.innerHTML += fText.charAt(fn);
+    fn++;
+    }else{
+        clearInterval(blinkID);
+        clearInterval(ftID);
+        let blink2ID = setInterval(()=>{
+    sb.style.opacity="1";
+    setTimeout(()=>{
+        sb.style.opacity="0";
+    },150)
+},300);
+let stID = setInterval(()=>{
+    if(sn < (sText.length)){
+    st.innerHTML += sText.charAt(sn);
+    sn++;
+    }else{
+        clearInterval(blink2ID);
+        clearInterval(stID);
+        }
+     
+},300)
+    }
+    
+},300)
+}
+textPlay();
+// for toggling projects
 function toggle(me){
-   if(!isOpen){
+me.isOpen ;
+   if(!me.isOpen){
     me.style.transform = 'rotate(-180deg)';
     me.parentElement.parentElement.style.height = 'auto';
-    isOpen =true;
+    me.isOpen =true;
    }else{
     me.style.transform = 'rotate(0)';
     me.parentElement.parentElement.style.height = '50px';
-    isOpen =false;
+    me.isOpen =false;
    }
 }
 // for calculator
@@ -73,7 +116,7 @@ function add(val){
 //To-do list
 let addBox = document.querySelector(".addBox");
 let isAdderOpen = false
-function openAdder(){
+function openAdder(me){
     if(!isAdderOpen){
         addBox.style.height = '80px';
         addBox.style.padding = '5px 0';
@@ -83,6 +126,7 @@ function openAdder(){
         isAdderOpen = false;
         addBox.style.padding = '0';
     }
+    me.classList.toggle('open');
 }
 function addToList(){
     let listBox = document.querySelector('.lists')
@@ -104,7 +148,6 @@ function addToList(){
     let lName = document.createElement('p');
     let dustBin = document.createElement('div');
     if(listName.value.length > 2 && listTime.value.length >= 7){
-    // window.alert(`${listName.value} is added to To-do list, time : ${listTime.value}`);
     listBox.appendChild(div);
     div.appendChild(inp);
     inp.setAttribute('type','checkbox');
@@ -159,7 +202,6 @@ function choose(me){
         me.style.borderColor = bColor;    
         choice = me.title;
         questionSet[n].choice = me.innerHTML;
-        // window.alert(`Answer for question ${n+1} is ${questionSet[n].choice}`)
     }, 100);
 }
 let question = document.getElementById("question");
@@ -224,7 +266,7 @@ let prevBtn = document.getElementById('prev');
 let nextBtn = document.getElementById('next')
 let submitBtn = document.getElementById('submit');
 prevBtn.setAttribute('disabled','true');
-prevBtn.style.borderColor = '#666';
+prevBtn.style.opacity = '0.5';
 question.innerHTML = questionSet[n].question;
         optionBox.children[0].innerHTML = questionSet[n].A;
         optionBox.children[1].innerHTML = questionSet[n].B;
@@ -245,7 +287,7 @@ function prev(me){
             options.children[i].style.borderColor = 'transparent';
         }
         nextBtn.removeAttribute('disabled','true');
-        nextBtn.style.borderColor = '#000';
+        nextBtn.style.opacity = '1';
         setTimeout(() => {
             for(let i = 0;i<options.children.length;i++){
                 if(questionSet[n].choice === options.children[i].innerHTML){
@@ -256,12 +298,12 @@ function prev(me){
     }
     if(n < 1){
         prevBtn.setAttribute('disabled','true');
-        prevBtn.style.borderColor = '#666';
+        prevBtn.style.opacity="0.5";
     }
 }
 function next(nextBtn){
     prevBtn.removeAttribute('disabled','true');
-    prevBtn.style.borderColor = '#000';
+    prevBtn.style.opacity = '1';
     if(n < (questionSet.length - 1)){
         n++;
         question.innerHTML = questionSet[n].question;
@@ -285,7 +327,7 @@ function next(nextBtn){
     if((n+1) === questionSet.length){
         submitBtn.style.display = 'inline';
         nextBtn.setAttribute('disabled','true');
-        nextBtn.style.borderColor = '#666';
+        nextBtn.style.opacity = '0.5';
     }else{
         submitBtn.style.display = 'none';
     }
@@ -378,7 +420,7 @@ function speakText(){
     speechSynthesis.speak(utterancespeech);
   }
   else{
-      alert('Text-to-speech not supported!');
+      alert('Text-to-speech is not supported on this browser!');
   }
 }
 
@@ -396,7 +438,6 @@ for(let i=1;i<= (pLength.value/2);i++){
     let randK = Math.floor(Math.random()* keyWords.length);
     let randS = Math.floor(Math.random()* specs.length);
     outP+=keyWords.charAt(randK).concat(specs.charAt(randS));
-    // console.log();
 }
 }else{
 for(let i=1;i<= (pLength.value/2);i++){
@@ -407,14 +448,11 @@ for(let i=1;i<= (pLength.value/2);i++){
 let randK = Math.floor(Math.random()* keyWords.length);
 outP+=keyWords.charAt(randK);
 }
-// alert('hello'+pLength.value)
-// console.log(outP);
 outPut.value = outP;
 }
 function copyPw(){
     if(outPut.value.length > 1){
         navigator.clipboard.writeText(outPut.value);
-        // navigator.clipboard.writeText(el.value);
         alertBox.innerHTML = 'Password Copied!';
         setTimeout(() => {
             alertBox.innerHTML = '';
